@@ -1,0 +1,8 @@
+#!/bin/bash
+cat ./passwd1.txt |while read ip passwd
+do 
+echo "$host..."
+date1=`date`
+echo $date1
+./expect.sh $ip $passwd 
+done >/oracle/cmy/tb_usage.log
